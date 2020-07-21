@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# ban the specified website
+
+site=$1
+
+sudo echo "127.0.0.1 $site" >> /etc/hosts
+sudo dscacheutil -flushcache
+

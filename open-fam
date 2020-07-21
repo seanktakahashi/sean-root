@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# open website in tmux 
+
+session="family"
+path=$FAM
+
+if tmux has-session -t $session 2> /dev/null; then
+  echo "website session already attached"
+else
+  # create website session
+  tmux new -s $session -d -c $path
+  # run npm start
+  tmux rename-window -t $session run
+  tmux send-keys -t $session 'npm start' C-m
+  
+  # open bash for git
+  tmux new-window -t $session -c $path
+  tmux rename-window -t $session git
+  tmux send-keys -t $session 'git status' C-m
+  
+  # open vim
+  tmux new-window -t $session -c $path
+  tmux rename-window -t $session vim
+  tmux send-keys -t $session 'vim .' C-m
+  
+  # select vim
+  tmux select-window -t $session:2
+fi
+# attach session
+tmux attach -t $session
+
+
+### in case of vagrant:
+# tmux send-keys -t work 'vagrant up; tmux wait-for -S vagrant-up' C-m\; wait-for vagrant-up
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# unban all banned websites
+
+# note that the entra '' is a strange quirk of MacOS
+# remove '' on Unix
+sudo sed -i '' 's/.\(1.1.1.1*.\)/\1/g' /etc/hosts
+sudo dscacheutil -flushcache
+
