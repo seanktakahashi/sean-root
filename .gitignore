@@ -1,0 +1,5 @@
+# dev files
+*.swp
+*.swo
+# zsh history
+.zsh_history

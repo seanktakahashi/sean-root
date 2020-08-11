@@ -11,6 +11,7 @@ git --help [command]
 | ------- | ----------- |
 | `git rm [file.txt]` | remove file from git repo and filesystem |
 | `git rm --cached [file.txt] | remove file from git repo (use if only used `rm [file.txt]` |
+| `git reset [file.txt]` | undo add command |
 
 ## BRANCHES
 
