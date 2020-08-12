@@ -94,6 +94,7 @@ PATH="$PATH:/Users/sean/anaconda3/bin"
 alias sublime="open -a /Applications/Sublime\ Text.app"
 alias skim='open -a /Applications/Skim.app/Contents/MacOS/Skim'
 alias text-edit='open -a TextEdit'
+alias ll='ls -al'
 
 ###################
 #### FUNCTIONS ####
