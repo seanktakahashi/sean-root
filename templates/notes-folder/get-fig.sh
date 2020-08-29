@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # add a figure to this md proj
+# and then 
 
 figpath=$1
 figname=$2

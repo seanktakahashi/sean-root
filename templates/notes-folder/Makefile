@@ -12,7 +12,7 @@ TITLE:=README
 # compiles *.md files in notes/
 INPUT:=notes
 # file to output build file of all compiled notes
-OUTPUT_FILE:=notes
+OUTPUT_FILE:=temp-name # TODO change me to something descriptive
 # folder to ouptut indivually compiled notes
 OUTPUT_FOLDER:=out
 
