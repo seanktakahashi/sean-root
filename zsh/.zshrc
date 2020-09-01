@@ -3,21 +3,16 @@
 ######################
 
 #### GREETING ####
-GREETINGS_FILE=.zshrc-parts/greetings.sh
-source $GREETINGS_FILE
+source $HOME/bin/zsh/zshrc-parts/greetings.sh
 
 #### OPTIONS ####
-OPTIONS_FILE=.zshrc-parts/zshrc-options.sh
-source $OPTIONS_FILE
+source $HOME/bin/zsh/zshrc-parts/zshrc-options.sh
 
 #### EXPORTS + PATH + ALIASES ####
-EXPORTS_FILE=.zshrc-parts/exports.sh
-source $EXPORTS_FILE
+source $HOME/bin/zsh/zshrc-parts/exports-path-aliases.sh
 
 #### TO WATCH ####
-TO_WATCH_FILE=.zshrc-parts/to-watch.sh
-source $TO_WATCH_FILE
+source $HOME/bin/zsh/zshrc-parts/to-watch.sh
 
 #### HUNSPELL #### 
-HUNSPELL_FILE=.zshrc-parts/hunspellsh
-source $HUNSPELL_FILE
+source $HOME/bin/zsh/zshrc-parts/hunspell.sh

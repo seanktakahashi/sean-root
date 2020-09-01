@@ -50,7 +50,7 @@ build:
 # check spelling using hunspell
 # 	using en_US dictionary and en_additional_US dictionary
 spell:
-	hunspell -d en_US -p en_personal_US $(INPUT).md
+	hunspell -d en_US -p en_personal_US $(INPUT)/*.md
 
 list-dicts:
 	hunspell -D
