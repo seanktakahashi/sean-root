@@ -1,7 +1,7 @@
-# MAC-BIN
+# SEAN-ZSH-ROOT
 
-This is a bin to add to a Mac computer that Sean is using.
-It assumes a `zsh` shell, 
+This is Sean's personal root directory
+It assumes a zshell, 
 and both sets up this shell and provides some useful executeables.
 
 # Install
