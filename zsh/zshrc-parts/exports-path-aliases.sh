@@ -11,7 +11,7 @@ PROMPT="%(?.%F{green}√.%F{red}X%?)%f %F{cyan}%3~%f%B %F{yellow}%(!.#.>)%f%b"
 #### PATH ####
 ##############
 # add my bin to PATH
-PATH="$HOME/bin:$PATH"
+PATH=$SEAN/bin:$PATH
 
 #################
 #### ALIASES ####

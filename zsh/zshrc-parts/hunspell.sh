@@ -2,9 +2,9 @@
 #### HUNSPELL #### 
 ##################
 # Hunspell Dictionary
-export EN_SEAN_TXT="/Users/sean/Library/Spelling/en_sean/en_sean.txt"
-export EN_SEAN_IN="/Users/sean/Library/Spelling/en_sean/en_sean.in"
-export EN_SEAN_DIC="/Users/sean/Library/Spelling/en_sean.dic"
+export EN_SEAN_TXT="$HOME/Library/Spelling/en_sean/en_sean.txt"
+export EN_SEAN_IN="$HOME/Library/Spelling/en_sean/en_sean.in"
+export EN_SEAN_DIC="$HOME/Library/Spelling/en_sean.dic"
 
 add_to_dict() {
   echo $1 >> $EN_SEAN_TXT

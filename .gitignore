@@ -1,8 +1,0 @@
-# dev files
-*.swp
-*.swo
-# zsh history
-.zsh_history
-# local zsh config files
-local-zsh.sh
-to-watch.sh
