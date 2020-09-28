@@ -3,7 +3,7 @@
 set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-execute pathogen#infect()
+" execute pathogen#infect()
 syntax on
 filetype plugin indent on
 let g:gruvbox_number_column = 'grey'
@@ -21,10 +21,10 @@ nnoremap <C-i> <C-a>
 "add syntex highlighting for md
 autocmd BufRead *.md set ft=markdown
 " vim-plug
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 " plugin section
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'maxmellon/vim-jsx-pretty'
 " end vim-plug
-call plug#end()
+" call plug#end()

@@ -29,7 +29,7 @@ case $CHOICE in
     ;;
 esac
 
-echo "sean's cat ¯\_(ツ)_/¯
+echo "
       \    /\\
        )  ( $EYE)
       (  /  )

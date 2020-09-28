@@ -3,8 +3,8 @@
 #################
 setopt NO_CASE_GLOB # expansion of wild-card characters such as * and ?
 setopt AUTO_CD # if only a path is specified, assume proceeding `cd`
-setopt CORRECT
-setopt CORRECT_ALL # enable zsh corrections 
+# setopt CORRECT
+# setopt CORRECT_ALL # enable zsh corrections 
 
 # save history over multiple seassions
 # save history to file in ZDOTDIR (defined in ~/.zshenv)
