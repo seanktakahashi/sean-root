@@ -58,4 +58,6 @@ du -sh [path]
 * `-s` displays only total for each arg
 * `-h` makes it human readable
 
+# Ports
 
+- list pors that are listening `sudo lsof -i -P -n | grep LISTEN`

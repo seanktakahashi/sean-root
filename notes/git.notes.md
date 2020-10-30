@@ -5,6 +5,24 @@ use
 git --help [command]
 ```
 
+## Common Problems
+
+### Need to catch remote Branch up to Origin
+
+- for example, if `develop` branch is too far ahead of local branch,
+and recieve a `need rebase` tag (poorly labelled, should be need merge)
+  - `git fetch; git merge origin/develop; git push`
+
+## DIFF
+
+| Command | Description |
+| `git diff [branch] | list the differences between current branch and branch |
+| `git diff --name-status [branch] | list the files that differ in branch |
+| `git diff --stat color [branch] | list files that differ and shows number of changes |
+| `git diff [file] | list the changes to file that have not been commited |
+| `git diff [branch] [file] | show how file differs between branches |
+
+
 ## RM
 
 | Command | Description |
@@ -13,7 +31,7 @@ git --help [command]
 | `git rm --cached [file.txt] | remove file from git repo (use if only used `rm [file.txt]` |
 | `git reset [file.txt]` | undo add command |
 
-## BRANCHES
+## BRANCHING
 
 ### Major Commands
 
@@ -45,6 +63,7 @@ git --help [command]
 | `git checkout [branch]` | Switch to branch |
 | `git checkout -` | Switch to the branch last checked out |
 | `git checkout -- [file.txt]` | Discard changes to a file |
+| `git checkout [branch] -- [file.txt]` | copy version of file from branch |
 | `git merge [branch]` | Merge branch into the active branch |
 | `git merge [source-branch target-branch]` | Merge branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory (equal to `git stash push`) |

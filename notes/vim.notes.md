@@ -15,6 +15,13 @@ view [path]
 > vim -M [path]
 ```
 
+## Rename File
+
+| Command | Description |
+| ------- | ----------- |
+| `:w [filename]` | save file as filename |
+| `:saveas [filename]` | save file as filename and open in a new buffer |
+
 ## Explore
 
 ### Open Explore

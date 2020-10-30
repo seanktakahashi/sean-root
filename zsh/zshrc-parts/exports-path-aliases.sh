@@ -24,3 +24,7 @@ alias ll="ls -al"
 # tmux aliases
 alias tmuxnew="tmux new -s"
 alias tmuxattach="tmux attach-session -t"
+
+# git
+alias gsmall="git commit -am 'small'"
+alias gstat="git status"
