@@ -28,3 +28,7 @@ autocmd BufRead *.md set ft=markdown
 " Plug 'maxmellon/vim-jsx-pretty'
 " end vim-plug
 " call plug#end()
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
