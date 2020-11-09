@@ -28,3 +28,16 @@ alias tmuxattach="tmux attach-session -t"
 # git
 alias gsmall="git commit -am 'small'"
 alias gstat="git status"
+
+## SORTA works but still broken
+# zstyle ':completion:*:*:git:*' script $SEAN/zsh/.git-completion.bash
+#  `compinit` scans $fpath, so do this before calling it.
+# fpath=($SEAN/zsh/functions $fpath)
+autoload -Uz compinit && compinit -u
+
+## BOKEN
+# autoload bashcompinit
+# bashcompinit
+# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# source /usr/local/etc/profile.d/bash_completion.sh
+# source $SEAN/zsh/.git-completion.zsh
