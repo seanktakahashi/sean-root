@@ -3,6 +3,8 @@
 *.swo
 # zsh history
 .zsh_history
+# zsh compdump
+.zcompdump
 # local zsh config files
 local-zsh.sh
 to-watch.sh

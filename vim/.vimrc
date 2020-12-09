@@ -1,6 +1,6 @@
 " GENERAL
 "general settings for writing code
-set number
+set relativenumber
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 execute pathogen#infect()
