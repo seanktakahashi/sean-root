@@ -13,7 +13,7 @@ setopt EXTENDED_HISTORY
 SAVEHIST=5000
 HISTSIZE=2000
 # share history across multiple zsh sessions
-setopt SHARE_HISTORY
+# setopt SHARE_HISTORY
 # append to history
 setopt APPEND_HISTORY
 # add commands to history as they are typed, instead of on exit
