@@ -12,6 +12,7 @@ PROMPT="%(?.%F{green}√.%F{red}X%?)%f %F{cyan}%3~%f%B %F{yellow}%(!.#.>)%f%b"
 ##############
 # add my bin to PATH
 PATH=$SEAN/bin:$PATH
+PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 #################
 #### ALIASES ####
@@ -19,7 +20,7 @@ PATH=$SEAN/bin:$PATH
 alias sublime="open -a /Applications/Sublime\ Text.app"
 alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
 alias textedit="open -a TextEdit"
-alias ll="ls -al"
+alias ll="ls -Alth"
 
 # tmux aliases
 alias tmuxnew="tmux new -s"

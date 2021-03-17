@@ -1,6 +1,6 @@
 " GENERAL
 "general settings for writing code
-set relativenumber
+set relativenumber number
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 execute pathogen#infect()
@@ -16,6 +16,12 @@ set tags=tags
 nnoremap ; :
 "map <C-i> to <C-a> to free up <C-a> for tmux
 nnoremap <C-i> <C-a>
+" delete, yanking into special reg
+nnoremap d "_d
+vnoremap d "_d
+" replace currently selected text with default register
+" without yanking it
+vnoremap p "_dP
 
 " PLUGS
 "add syntex highlighting for md
