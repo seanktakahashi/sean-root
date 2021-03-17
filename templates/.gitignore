@@ -1,0 +1,10 @@
+## Sean's .gitignore
+# dependencies
+node_modules/
+
+# dev
+*.swp
+*.swo
+
+# misc
+.DS_Store
