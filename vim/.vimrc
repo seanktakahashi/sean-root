@@ -1,12 +1,14 @@
-" GENERAL
-"general settings for writing code
+" GENERAL - general settings for writing code
 set relativenumber number
+" grey column at 80 chars
 set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-execute pathogen#infect()
+let g:gruvbox_number_column = 'grey'
+" zsh-like tab completion for files
+set wildmode=longest,list,full
+set wildmenu
+" other
 syntax on
 filetype plugin indent on
-let g:gruvbox_number_column = 'grey'
 set tabstop=2 shiftwidth=2 expandtab
 set tags=tags
 
@@ -17,13 +19,15 @@ nnoremap ; :
 "map <C-i> to <C-a> to free up <C-a> for tmux
 nnoremap <C-i> <C-a>
 " delete, yanking into special reg
-nnoremap d "_d
-vnoremap d "_d
+" nnoremap d "_d
+" vnoremap d "_d
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
 
 " PLUGS
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+execute pathogen#infect()
 "add syntex highlighting for md
 autocmd BufRead *.md set ft=markdown
 " vim-plug
