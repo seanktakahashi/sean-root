@@ -21,6 +21,7 @@ while true; do
   newTime=$($grabLastAccess)
   if [[ "$startTime" != "$newTime" ]]; then    
     echo -e "\n=== RUNNING COMMAND @ ($newTime)==="
+    echo -e "> $commandToRun"
     $commandToRun
     startTime=$newTime
   fi

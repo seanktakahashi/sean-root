@@ -14,8 +14,6 @@ if [ $# -eq 0 ] || [ $1 = "--help" ]; then
   exit 1
 fi
 
-exit 1
-
 function build_month_dir()
 {
   echo $(date +%Y-%b)
