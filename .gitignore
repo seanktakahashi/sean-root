@@ -7,5 +7,7 @@
 .zcompdump
 .zcompcache
 # local zsh config files
-local-zsh.sh
-to-watch.sh
+local-sh.sh
+# local bin
+local-bin/*
+!local-bin/README.md

@@ -6,9 +6,6 @@ function fileChecks()
   elif [ ! -f "$PWD/vim/.vimrc" ]; then
     echo "missing vim/.vimrc"
     exit 1;
-  elif [ ! -f "$PWD/vim/.tmux.conf" ]; then
-    echo "missing vim/.tmux.conf"
-    exit 1;
   fi
 }
 
