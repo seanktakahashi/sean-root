@@ -3,19 +3,16 @@
 ######################
 
 #### GREETING ####
-source $ZDOTDIR/zshrc-parts/greetings.sh
+source $ZDOTDIR/greetings.sh
 
-#### OPTIONS ####
-source $ZDOTDIR/zshrc-parts/zshrc-options.sh
+#### PROMPT, SEAN BIN, GENERAL ####
+source $ZDOTDIR/general.sh
 
-#### EXPORTS + PATH + ALIASES ####
-source $ZDOTDIR/zshrc-parts/exports-path-aliases.sh
+#### ZSH OPTIONS ####
+source $ZDOTDIR/zshrc-options.sh
 
-#### TO WATCH ####
-source $ZDOTDIR/zshrc-parts/to-watch.sh
-
-#### HUNSPELL #### 
-source $ZDOTDIR/zshrc-parts/hunspell.sh
+#### GIT ALIASES ####
+source $ZDOTDIR/git-aliases.sh
 
 #### LOCAL ZSH ####
-source $ZDOTDIR/zshrc-parts/local-zsh.sh
+source $ZDOTDIR/local-sh.sh

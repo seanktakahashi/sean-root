@@ -1,2 +1,0 @@
-SEAN=$HOME/bin
-ZDOTDIR=$SEAN/zsh
