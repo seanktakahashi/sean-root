@@ -9,10 +9,15 @@ source $ZDOTDIR/greetings.sh
 source $ZDOTDIR/general.sh
 
 #### ZSH OPTIONS ####
-source $ZDOTDIR/zshrc-options.sh
+if [ ! -z $ZSH_VERSION ]; then 
+  source $ZDOTDIR/zshrc-options.sh
+fi
 
 #### GIT ALIASES ####
 source $ZDOTDIR/git-aliases.sh
 
 #### LOCAL ZSH ####
-source $ZDOTDIR/local-sh.sh
+include () {
+  [[ -f "$1" ]] && source "$1"
+}
+include $ZDOTDIR/local-sh.sh

@@ -1,3 +1,4 @@
+#!/usr/bash
 function fileChecks()
 {
   if [ ! -f "$PWD/vim/.tmux.conf" ]; then
@@ -17,8 +18,15 @@ function main()
 
   fileChecks
 
-  echo "SEAN=$PWD" > ~/.zshenv
-  echo 'ZDOTDIR=$SEAN/zsh' >> ~/.zshenv
+  if [ ! -z $BASH_VERSION ]; then
+    echo "export SEAN=$PWD" > ~/.bashrc
+    echo 'ZDOTDIR=$SEAN/zsh' >> ~/.bashrc
+    echo 'source $SEAN/zsh/.zshrc' >> ~/.bashrc
+  elif [ ! -z $ZSH_VERSION ]; then
+    echo "SEAN=$PWD" > ~/.zshenv
+    echo 'ZDOTDIR=$SEAN/zsh' >> ~/.zshenv
+  fi
+
   ln -s $PWD/vim/.vimrc ~/.vimrc
   ln -s $PWD/vim/.tmux.conf ~/.tmux.conf
 
