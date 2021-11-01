@@ -20,7 +20,6 @@ set tabstop=2 shiftwidth=2 expandtab
 set tags=tags
 
 
-
 " REMAPPINGS
 "map ; to : so that I don't have to shift
 nnoremap ; :
@@ -32,21 +31,3 @@ nnoremap <C-i> <C-a>
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
-
-" PLUGS
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-execute pathogen#infect()
-"add syntex highlighting for md
-autocmd BufRead *.md set ft=markdown
-" vim-plug
-call plug#begin('~/.vim/plugged')
-" plugin section
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-augroup SyntaxSettings
-  autocmd!
-  autocmd BufNewFile,BufRead *.tsx set filetype=typescript
-augroup END
-" end vim-plug
-call plug#end()
