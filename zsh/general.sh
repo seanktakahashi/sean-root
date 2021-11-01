@@ -31,6 +31,12 @@ PATH=$SEAN/bin:$PATH
 PATH=$SEAN/local-bin:$PATH
 
 #### LL ####
-alias ll="ls -GgoAth -color" 
+ll() {
+  if [ ! -z "$ZSH_VERSION" ]; then
+    ls -GgoAth -color
+  elif [ ! -z "BASH_VERSION" ]; then
+    ls -GgoAth --color
+  fi
+}
 
 
