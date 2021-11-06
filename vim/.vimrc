@@ -4,7 +4,7 @@
 set relativenumber number
 " grey column at 80 chars
 set colorcolumn=80
-let g:gruvbox_number_column = 'grey'
+hi ColorColumn ctermbg=lightgrey
 
 "   CURSOR
 let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
