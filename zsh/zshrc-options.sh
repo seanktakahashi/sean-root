@@ -6,8 +6,6 @@ setopt AUTO_CD # if only a path is specified, assume proceeding `cd`
 # setopt CORRECT
 # setopt CORRECT_ALL # enable zsh corrections 
 
-autoload -Uz compinit && compinit # add git autocomplete
-
 # save history over multiple seassions
 # save history to file in ZDOTDIR (defined in ~/.zshenv)
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history 

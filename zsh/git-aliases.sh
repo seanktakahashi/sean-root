@@ -40,5 +40,9 @@ bash_git_complete() {
   fi
 }
 
-bash_git_complete
+if [ $ZSH_VERSION ]; then
+  autoload -Uz compinit && compinit # add git autocomplete 
+elif [ $BASH_VERSION ]; then
+  bash_git_complete
+fi
 
