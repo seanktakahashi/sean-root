@@ -12,4 +12,4 @@ EXIT_CODE='%(?.%F{green}√.%F{red}X)%f'
 CURR_DIR='%F{cyan}%3~%f%B'
 POINTER='%F{yellow}%(!.#.>)%f%b'
 PROMPT="${EXIT_CODE}${CURR_DIR} ${POINTER}"
-RPROMPT="%K{green}-\$(parse_git_branch)-%k"
+RPROMPT="%K{green}\$(parse_git_branch)%k"
