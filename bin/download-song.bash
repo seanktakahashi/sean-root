@@ -38,6 +38,8 @@ function get_music_dir()
     music_dir="$MUSIC/american/$(build_month_dir)"
   elif [ $1 = "hype" ]; then
     music_dir="$MUSIC/hype/$(build_month_dir)"
+  elif [ $1 = "spanish" ]; then
+    music_dir="$MUSIC/spanish/$(build_month_dir)"
   fi
   echo "$music_dir"
 }
