@@ -26,5 +26,5 @@ source_if_zsh $ZDOTDIR/zshrc-options.sh
 #### GIT ALIASES ####
 source $ZDOTDIR/git-aliases.sh
 
-#### LOCAL ZSH ####
-[[ -f $ZDOTDIR/local-sh.sh ]] && source $ZDOTDIR/local-sh.sh
+#### LOCAL SH ####
+[[ -f "$ZDOTDIR/local.sh" ]] && source "$ZDOTDIR/local.sh"
