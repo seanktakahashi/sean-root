@@ -19,6 +19,7 @@ gfetch() {
 alias gfix="git commit -am 'fix'"
 alias gsmall="git commit -am 'small'"
 alias gshow="git show --summary"
+alias gupstream='git push --set-upstream origin $(git branch --show-current)'
 
 bash_git_complete() {
   git_completed=0
