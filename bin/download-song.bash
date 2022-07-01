@@ -10,13 +10,23 @@ fi
 
 if [ $# -eq 0 ] || [ $1 = "--help" ]; then
   echo "Usage:   download-song.bash [url] [folder?]"
-  echo "Folders: anime, kpop, jpop, lofi, chill, american, hype"
+  echo "Folders: kpop, jpop, lofi, chill, american, hype"
   exit 1
 fi
 
 function build_month_dir()
 {
-  echo $(date +%Y-%b)
+  month=$(date +%m)
+
+  if [ "$month" -gt "9" ]; then
+    echo $(date +%Y-fall)
+  elif [ "$month" -gt "6" ]; then
+    echo $(date +%Y-summer)
+  elif [ "$month" -gt "3" ]; then
+    echo $(date +%Y-spring)
+  elif [ "$month" -gt "0" ]; then
+    echo $(date +%Y-winter)
+  fi
 }
 
 function get_music_dir()
@@ -24,8 +34,6 @@ function get_music_dir()
   local music_dir="$MUSIC"
   if [ -z "$1" ]; then
     music_dir="$MUSIC/$(build_month_dir)"
-  elif [ $1 = "anime" ]; then
-    music_dir="$MUSIC/anime/$(build_month_dir)"
   elif [ $1 = "kpop" ]; then
     music_dir="$MUSIC/kpop/$(build_month_dir)"
   elif [ $1 = "jpop" ]; then
