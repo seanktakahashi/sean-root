@@ -2,6 +2,9 @@
 #
 # relies on $MUSIC being set to where music should be saved
 
+
+set -e # exit entire script if any function calls `exit`
+
 if [ -z $MUSIC ]
 then
   echo "You need to set \$MUSIC=/path/to/music"
@@ -31,23 +34,25 @@ function build_month_dir()
 
 function get_music_dir()
 {
-  local music_dir="$MUSIC"
-  if [ -z "$1" ]; then
-    music_dir="$MUSIC/$(build_month_dir)"
-  elif [ $1 = "kpop" ]; then
-    music_dir="$MUSIC/kpop/$(build_month_dir)"
+  local music_dir;
+  if [ $1 = "kpop" ]; then
+    music_dir="kpop/$(build_month_dir)"
   elif [ $1 = "jpop" ]; then
-    music_dir="$MUSIC/jpop/$(build_month_dir)"
+    music_dir="jpop/$(build_month_dir)"
   elif [ $1 = "lofi" ]; then
-    music_dir="$MUSIC/lofi/$(build_month_dir)"
+    music_dir="lofi/$(build_month_dir)"
   elif [ $1 = "chill" ]; then
-    music_dir="$MUSIC/chill/$(build_month_dir)"
+    music_dir="chill/$(build_month_dir)"
   elif [ $1 = "american" ]; then
-    music_dir="$MUSIC/american/$(build_month_dir)"
+    music_dir="american/$(build_month_dir)"
   elif [ $1 = "hype" ]; then
-    music_dir="$MUSIC/hype/$(build_month_dir)"
+    music_dir="hype/$(build_month_dir)"
   elif [ $1 = "spanish" ]; then
-    music_dir="$MUSIC/spanish/$(build_month_dir)"
+    music_dir="spanish/$(build_month_dir)"
+  else
+    >&2 echo "Unknown music dir: $1"
+    >&2 echo "Supported dirs: [kpop, jpop, lofi, chill, american, hype, spanish]"
+    exit 1
   fi
   echo "$music_dir"
 }
@@ -55,7 +60,8 @@ function get_music_dir()
 function main()
 {
   music_dir=$(get_music_dir $2)
-  mkdir -p $music_dir
+  local abs_music_dir=$MUSIC/$music_dir
+  mkdir -p $abs_music_dir
 
   # continue on partially downloaded files
   # ignore failures (continue even if a song on playlist doesn't download)
@@ -63,10 +69,13 @@ function main()
   # Choose best audio of either format
   # Write thumbnails as well
   ARGS=("-f 'bestaudio[ext=m4a]/bestaudio[ext=webm]' --write-thumbnail")
+  # METADATA=("--parse-metadata 'title:%(artist)s - %(title)s'")
+  METADATA=("--parse-metadata 'description:%(artist)s - %(title)s' --embed-metadata")
+  # METADATA=("--parse-metadata 'album:test' --embed-metadata")
   # Save files to Music
-  OUT=("-o '$music_dir/%(title)s.%(ext)s'")
+  OUT=("-o '$abs_music_dir/%(title)s.%(ext)s'")
 
-  CMD="youtube-dl $FLAGS $ARGS $OUT '$1'"
+  CMD="yt-dlp $FLAGS $ARGS $METADATA $OUT '$1'"
   echo "-------DOWNLOAD SONG--------"
   echo "----------COMMAND-----------"
   echo $CMD

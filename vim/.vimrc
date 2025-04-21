@@ -31,3 +31,6 @@ nnoremap <C-i> <C-a>
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
+
+" Yank to system clipboard
+set clipboard=unnamed
